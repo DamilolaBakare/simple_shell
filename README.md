@@ -1,27 +1,32 @@
 # SIMPLE SHELL :shell:
-## Description :description:
+
+## Description :message:
+
 This is a simple implementation of a UNIX command line interpreter. The shell can interpret and execute command line arguments read from the standard input. the shell read lines from a file or terminal line which is then interpreted and executed if the command is valid
 
-![simple shell image](https://raw.githubusercontent.com/joshuaclayton/simple-shell/master/images/simple-shell.png)
+![simple shell image](/shell.jpeg)
 
+## Requirements
 
-## Requirements :requirements:
 - All the files are to be compiled on an Ubuntu 14.04 LTS machine with:
-`gcc -Wall -Werror -Wextra -pedantic *.c -o simple-shell`
+  `gcc -Wall -Werror -Wextra -pedantic *.c -o simple-shell`
 - All files ends end with a new line, with no memory leaks
 - All code will use the Betty style. It will be checked using `betty-style.pl` and `betty-doc.pl`
 - All code will be tested using the test files in the test folder.
 - The simple shell supports most shell commands, such as `cat`, `pwd`,` ls -la` and more.
 
-## Return Value :value:
+## Return Value :
+
 The shell returns a value of 0 if the command is valid and the command is executed successfully.
 
-## Output :output:
- - The program must have the exact same output as `sh (/bin/sh)` as well as the exact same error output.
+## Output
+
+- The program must have the exact same output as `sh (/bin/sh)` as well as the exact same error output.
 - The only difference is when you print an error, the name of the program must be equivalent to the `argv[0]`
 
 ## list of fucntions and system calls used
-`
+
+```
 - access (man 2 access)
 - chdir (man 2 chdir)
 - close (man 2 close)
@@ -52,11 +57,10 @@ The shell returns a value of 0 if the command is valid and the command is execut
 - wait3 (man 2 wait3)
 - wait4 (man 2 wait4)
 - write (man 2 write)
-`
+
+```
 
 ## Contributors
+
 - Oluwasube Promise
 - Damilola Bakare
-
-
-
