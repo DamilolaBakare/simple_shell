@@ -63,4 +63,4 @@ The shell returns a value of 0 if the command is valid and the command is execut
 ## Contributors :two_men_holding_hands:
 
 - Oluwasube Promise <oluwasube@outlook.com>
-- Damilola Bakare <Adamilola414@gmail.com>
+- Damilola Bakare <adamilola414@gmail.com>
