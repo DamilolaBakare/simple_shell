@@ -9,7 +9,7 @@ This is a simple implementation of a UNIX command line interpreter. The shell ca
 ## Requirements
 
 - All the files are to be compiled on an Ubuntu 14.04 LTS machine with:
-  `gcc -Wall -Werror -Wextra -pedantic *.c -o simple-shell`
+  `gcc -Wall -Werror -Wextra -pedantic *.c `
 - All files ends end with a new line, with no memory leaks
 - All code will use the Betty style. It will be checked using `betty-style.pl` and `betty-doc.pl`
 - All code will be tested using the test files in the test folder.
