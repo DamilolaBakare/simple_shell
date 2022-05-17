@@ -37,4 +37,5 @@ config *config_init(config *build)
 	build->shell_name = NULL;
 	build->error_status = 0;
 	return (build);
+	
 }
