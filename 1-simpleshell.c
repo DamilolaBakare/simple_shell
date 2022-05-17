@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * shell - a function that executes the
  * loop's functionalities
