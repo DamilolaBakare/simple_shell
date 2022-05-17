@@ -1,6 +1,6 @@
 # SIMPLE SHELL :shell:
 
-## Description :message:
+## Description :page_with_curl:
 
 This is a simple implementation of a UNIX command line interpreter. The shell can interpret and execute command line arguments read from the standard input. the shell read lines from a file or terminal line which is then interpreted and executed if the command is valid
 
@@ -19,7 +19,7 @@ This is a simple implementation of a UNIX command line interpreter. The shell ca
 
 The shell returns a value of 0 if the command is valid and the command is executed successfully.
 
-## Output
+## Output :file_folder:
 
 - The program must have the exact same output as `sh (/bin/sh)` as well as the exact same error output.
 - The only difference is when you print an error, the name of the program must be equivalent to the `argv[0]`
@@ -60,7 +60,7 @@ The shell returns a value of 0 if the command is valid and the command is execut
 
 ```
 
-## Contributors
+## Contributors :two_men_holding_hands:
 
-- Oluwasube Promise
-- Damilola Bakare
+- Oluwasube Promise <oluwasube@outlook.com>
+- Damilola Bakare <Adamilola414@gmail.com>
