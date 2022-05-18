@@ -33,7 +33,6 @@ int launch_prog(char **args);
 void exit_shell(char **args, char *line, char **env);
 void env_shell(char **args, char *line, char **env);
 int _strcmp(char *s1, char *s2);
-<<<<<<< HEAD
 char *find_path(char *args, char *tmp, char *er);
 char *search_cwd(char *filename, char *er);
 int bridge(char *check, char **args);
@@ -45,7 +44,6 @@ char *_getenv(char *env);
 char *_strstr(char *haystack, char *needle);
 int _strlen(char *s);
 #endif
-=======
 char *_strdup(char *src);
 
 char *concat_path_with_line(char *args, char *token);
@@ -57,4 +55,3 @@ int execute_exit(char **arg, char *buffer);
 
 
 #endif /**SHELL_H*/
->>>>>>> f64255c03e45fa59cd0c1a6ddb9ef7d48553f942
