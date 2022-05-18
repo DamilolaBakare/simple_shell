@@ -1,4 +1,4 @@
-#include "main.h"
+#include "shell.h"
 /**
  * shell - Infinite loop that runs shell
  * @ac: Arg count

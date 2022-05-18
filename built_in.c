@@ -1,4 +1,4 @@
-#include "main.h"
+#include "shell.h"
 /**
  * bridge - Will check to see whether we are dealing with a builtin or not
  * @check: Figures out what to execute
