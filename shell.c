@@ -1,47 +1,55 @@
 #include "shell.h"
 /**
- * shell - Infinite loop that runs shell
- * @ac: Arg count
- * @av: args passed to shell at beginning of prog
- * @env: Environment
- * Return: Void
+ * main - function main
+ *
+ * Return: int.
  */
-void shell(int ac, char **av, char **env)
-{
-	char *line;
-	char **args;
-	int status = 1;
-	char *tmp = NULL;
-	char *er;
-	char *filename;
-	int flow;
 
-	er = "Error";
-	do {
-		prompt();
-		line = _getline();
-		args = split_line(line);
-		flow = bridge(args[0], args);
-		if (flow == 2)
+int main(void)
+{
+	if (isatty(STDIN_FILENO))
+		simple_shell();
+	else
+		not_interactive();
+	return (0);
+}
+/**
+ * simple_shell - function containing the main functions
+ * Return: int
+ */
+
+int simple_shell(void)
+{
+	struct stat dir;
+	char *alloc = NULL, **line_args = NULL;
+	size_t size = 0;
+
+	while (1)
+	{
+		write(1, "$ ", 2);
+		alloc = get_line(alloc, size);
+		if (alloc == NULL)
+			continue;
+
+		line_args = tokenizer(alloc);
+
+		if (builtins_exec(line_args, alloc) == 1)
 		{
-			filename = args[0];
-			args[0] = find_path(args[0], tmp, er);
-			if (args[0] == er)
+			if (stat(line_args[0], &dir) == 0)
+				execute(line_args);
+			if (stat(line_args[0], &dir) == -1)
 			{
-				args[0] = search_cwd(filename, er);
-				if (args[0] == filename)
-					write(1, er, 5);
+				line_args[0] = pathfound(line_args[0]);
+				if (line_args[0] != '\0')
+					execute(line_args);
+				else
+				{
+					perror("Error");
+				}
 			}
 		}
-		if (args[0] != er)
-			status = execute_prog(args, line, env, flow);
-		free(line);
-		free(args);
-	} while (status);
-	if (!ac)
-		(void)ac;
-	if (!av)
-		(void)av;
-	if (!env)
-		(void)env;
+		free(line_args);
+		free(alloc);
+	}
+	return (0);
 }
