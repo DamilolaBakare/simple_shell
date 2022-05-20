@@ -1,10 +1,11 @@
 #include "main.h"
 
 /**
- * check_for_builtins - checks if the command is a builtin
+ * checks_for_builtins - checks if the command is a builtin
  * @vars: variables
  * Return: pointer to the function or NULL
  */
+
 void (*check_for_builtins(vars_t *vars))(vars_t *vars)
 {
 	unsigned int i;
@@ -167,4 +168,5 @@ void _help(vars_t *vars __attribute__((unused)))
 {
 	__attribute__((unused)) void *f;
 	_puts("This is the help screen\n");
+
 }
