@@ -25,7 +25,9 @@ The shell returns a value of 0 if the command is valid and the command is execut
 - The only difference is when you print an error, the name of the program must be equivalent to the `argv[0]`
 
 ## Usage
-![simple shell image](/shell_gif.gif)
+
+![simple shell ](/shell_gif.gif)
+
 ## list of fucntions and system calls used
 
 ```
