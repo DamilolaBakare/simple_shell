@@ -6,6 +6,7 @@
  *
  * Return: number of chars printed or -1 on failure
  */
+
 ssize_t _puts(char *str)
 {
 	ssize_t num, len;
@@ -25,6 +26,7 @@ ssize_t _puts(char *str)
  * @strtodup: string to be duplicated
  * Return: a pointer to the new duplicated string
  */
+
 char *_strdup(char *strtodup)
 {
 	char *copy;
@@ -70,6 +72,7 @@ int _strcmpr(char *strcmp1, char *strcmp2)
  * @strc2: second string
  * Return: pointer
  */
+
 char *_strcat(char *strc1, char *strc2)
 {
 	char *newstring;
@@ -118,4 +121,5 @@ unsigned int _strlen(char *str)
 	for (len = 0; str[len]; len++)
 		;
 	return (len);
+
 }

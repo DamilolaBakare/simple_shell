@@ -1,11 +1,12 @@
 #include "main.h"
 
 /**
- * make_env - make the shell environment from the environment passed to main
+ * make_env - make shell environment from the environment passed to main
  * @env: environment passed to main
  *
  * Return: pointer to the new environment
  */
+
 char **make_env(char **env)
 {
 	char **newenv = NULL;
@@ -31,6 +32,7 @@ char **make_env(char **env)
  *
  * Return: void
  */
+
 void free_env(char **env)
 {
 	unsigned int i;
@@ -38,4 +40,5 @@ void free_env(char **env)
 	for (i = 0; env[i] != NULL; i++)
 		free(env[i]);
 	free(env);
+
 }
